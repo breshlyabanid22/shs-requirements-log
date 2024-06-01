@@ -8,12 +8,12 @@ function App() {
   const [formData, setFormData] = useState({
     Date: '',
     Name: '',
-    Strand: 'STEM',
-    ReportCard: 'Complete',
-    GoodMoral: 'Original',
-    PSA: 'Original',
-    ESC: 'Original',
-    TestResult: 'Complete',
+    Strand: '',
+    ReportCard: '',
+    GoodMoral: '',
+    PSA: '',
+    ESC: '',
+    TestResult: '',
     Remarks: '',
   });
 
@@ -71,11 +71,11 @@ function App() {
         Name: '',
         Date: formattedDate,
         Strand: 'STEM',
-        ReportCard: 'Complete',
-        GoodMoral: 'Original',
-        PSA: 'Original',
-        ESC: 'Original',
-        TestResult: 'Complete',
+        ReportCard: '',
+        GoodMoral: '',
+        PSA: '',
+        ESC: '',
+        TestResult: '',
         Remarks: '',
       })
       setIsError(false);
