@@ -60,7 +60,7 @@ function App() {
     formDataToSend.append('TestResult', formData.TestResult);
     formDataToSend.append('Remarks', formData.Remarks);
 
-    axios.post("https://script.google.com/macros/s/AKfycbxmncrBuO7OAYXNmYR1tQsLEB58OYjvOy0v7qCxO2hzZte3R2u5lau371roA43HQNU6/exec", formDataToSend, {
+    axios.post("https://script.google.com/macros/s/AKfycbyGcDzU77RdS9Uqu41IqMvYoopMAjQiUkaMKHv4TQpGwkikwtKXlNqK-0t5GPqiEs-t/exec", formDataToSend, {
       headers: {
         'Content-Type': 'application/json'
       },
