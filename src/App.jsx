@@ -123,6 +123,7 @@ function App() {
           />
         <h3>Submitted Requirements</h3>
        <div className='requirements-container'>
+       <hr/>
         <p>1. Report Card</p>
           <label>
             Complete
@@ -144,6 +145,7 @@ function App() {
               checked={formData.ReportCard === "Incomplete"}
               onChange={handleChange} />
           </label>
+          <hr/>
           <p>2. Good Moral</p>
           <label>
             Original
@@ -165,6 +167,7 @@ function App() {
               checked={formData.GoodMoral === "Photocopy"}
               onChange={handleChange} />
           </label>
+          <hr/>
           <p>3. PSA</p>
           <label>
             Original
@@ -186,6 +189,7 @@ function App() {
               checked={formData.PSA === "Photocopy"}
               onChange={handleChange} />
           </label>
+          <hr/>
           <p>4. ESC Certificate</p>
           <label>
             Original
@@ -207,6 +211,7 @@ function App() {
               checked={formData.ESC === "No Submission"}
               onChange={handleChange} />
           </label>
+          <hr/>
           <p>5. Exam Result</p>
           <label>
             Complete
@@ -228,6 +233,7 @@ function App() {
               checked={formData.TestResult === "Missing"}
               onChange={handleChange} />
           </label>
+          <hr/>
        </div>
        <a className='sheet-link' target='_blank' href="https://docs.google.com/spreadsheets/d/1nfVR6y23yL0SpEDelaEo_IxNyUFKS6GqOvtR4FdCkQA/edit?usp=sharing">Open Google Sheets</a>
        <button type='submit'>Save</button>
