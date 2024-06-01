@@ -9,17 +9,17 @@ function App() {
     Date: '',
     Name: '',
     Strand: 'STEM',
-    ReportCard: 'Original',
+    ReportCard: 'Complete',
     GoodMoral: 'Original',
     PSA: 'Original',
     ESC: 'Original',
     TestResult: 'Complete',
     Remarks: '',
   });
-  window.googleDocCallback = function () { return true; };
+
+  const today = new Date();
+  const formattedDate = today.toISOString().split('T')[0];
   useEffect(() => {
-    const today = new Date();
-    const formattedDate = today.toISOString().split('T')[0];
     setFormData(prevFormData => ({
       ...prevFormData,
       Date: formattedDate
@@ -30,7 +30,7 @@ function App() {
     if(toast){
       const timeout = setTimeout(() => {
         setToast("");
-      }, 2000);
+      }, 1000);
       return () => clearTimeout(timeout);
     }
   })
@@ -60,12 +60,23 @@ function App() {
     formDataToSend.append('TestResult', formData.TestResult);
     formDataToSend.append('Remarks', formData.Remarks);
 
-    axios.post("https://script.google.com/macros/s/AKfycbyGcDzU77RdS9Uqu41IqMvYoopMAjQiUkaMKHv4TQpGwkikwtKXlNqK-0t5GPqiEs-t/exec", formDataToSend, {
+    axios.post("https://sheet.best/api/sheets/5a9d9ce0-974d-4545-b412-b62ff4ae7d29", formDataToSend, {
       headers: {
         'Content-Type': 'application/json'
       },
     }).then(res => {
       console.log(res);
+      setFormData({
+        Name: '',
+        Date: formattedDate,
+        Strand: 'STEM',
+        ReportCard: 'Complete',
+        GoodMoral: 'Original',
+        PSA: 'Original',
+        ESC: 'Original',
+        TestResult: 'Complete',
+        Remarks: '',
+      })
       setIsError(false);
       setToast("Successfully saved!");
     }).catch(error => {
@@ -113,23 +124,23 @@ function App() {
        <div className='requirements-container'>
         <p>1. Report Card</p>
           <label>
-            Original
+            Complete
             <input 
               id='ReportCard'
               type="radio"
               name='ReportCard'
-              value='Original'
-              checked={formData.ReportCard === "Original"}
+              value='Complete'
+              checked={formData.ReportCard === "Complete"}
               onChange={handleChange} />
           </label>
           <label>
-            Photocopy
+            Incomplete
             <input 
               id='ReportCard'
               type="radio"
               name='ReportCard'
-              value='Photocopy'
-              checked={formData.ReportCard === "Photocopy"}
+              value='Incomplete'
+              checked={formData.ReportCard === "Incomplete"}
               onChange={handleChange} />
           </label>
           <p>2. Good Moral</p>
@@ -217,6 +228,7 @@ function App() {
               onChange={handleChange} />
           </label>
        </div>
+       <a className='sheet-link' target='_blank' href="https://docs.google.com/spreadsheets/d/1nfVR6y23yL0SpEDelaEo_IxNyUFKS6GqOvtR4FdCkQA/edit?usp=sharing">Open Google Sheets</a>
        <button type='submit'>Save</button>
       </form>
     </div>
