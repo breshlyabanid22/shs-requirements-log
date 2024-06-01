@@ -97,7 +97,7 @@ function App() {
           className='name-input'
           type="text" 
           name='Name'
-          placeholder='Student Name' 
+          placeholder="Student's Name" 
           value={formData.Name}
           onChange={handleChange}
           required
