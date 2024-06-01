@@ -62,7 +62,8 @@ function App() {
 
     axios.post("https://sheet.best/api/sheets/5a9d9ce0-974d-4545-b412-b62ff4ae7d29", formDataToSend, {
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'X-Api-Key': 'Zz6WcP5L#jw%qMPk7Ax66aAGDzh1cMM$qJVDW4gsGMY6mXT4LGD9gJtUqgP6OCMM',
       },
     }).then(res => {
       console.log(res);
@@ -90,7 +91,7 @@ function App() {
     <>
     <Navbar/>
     <div className='form-container'>
-      <form onSubmit={handleSubmit} method='POST' action='https://script.google.com/macros/s/AKfycbxmncrBuO7OAYXNmYR1tQsLEB58OYjvOy0v7qCxO2hzZte3R2u5lau371roA43HQNU6/exec' >
+      <form onSubmit={handleSubmit}>
         <span className={`${toast ? 'toast-span': 'toast-hidden'} ${isError ? 'toast-error': ''}`}>{toast}</span>
         <input 
           className='name-input'
