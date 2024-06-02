@@ -66,15 +66,13 @@ function App() {
     formDataToSend.append("TestResult", formData.TestResult);
     formDataToSend.append("Remarks", formData.Remarks);
 
-    axios
-      .post(
-        "https://sheet.best/api/sheets/5a9d9ce0-974d-4545-b412-b62ff4ae7d29",
+    axios.post(
+        "https://sheet.best/api/sheets/250765e3-7152-4c83-b8fb-db8e2d3da20f",
         formDataToSend,
         {
           headers: {
             "Content-Type": "application/json",
-            "X-Api-Key":
-              "Zz6WcP5L#jw%qMPk7Ax66aAGDzh1cMM$qJVDW4gsGMY6mXT4LGD9gJtUqgP6OCMM",
+            "X-Api-Key": "-_#$B03m1erWJamkU2QL2eA0n#azC1d4XWpak!iZonqWPNYh!n3Ewejx3C!bf8AD",
           },
         }
       )
@@ -97,6 +95,7 @@ function App() {
       })
       .catch((error) => {
         console.error(error);
+        setLoading(false)
         setIsError(true);
         setToast("There's an error saving the data. Please try again!");
       });
@@ -113,10 +112,9 @@ function App() {
               color={color}
               loading={loading}
               size={50}
-              aria-label="Saving..."
               data-testid="loader"
             />
-            <p>Saving...</p>
+            <p> Saving...</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit}>
@@ -282,7 +280,7 @@ function App() {
             <a
               className="sheet-link"
               target="_blank"
-              href="https://docs.google.com/spreadsheets/d/1nfVR6y23yL0SpEDelaEo_IxNyUFKS6GqOvtR4FdCkQA/edit?usp=sharing"
+              href="https://docs.google.com/spreadsheets/d/1kSf6egKSMFDMyDlQNiT_Rslzs8me-c9SkHRhUoEdaRI/edit?usp=sharing"
             >
               Open Google Sheets
             </a>
