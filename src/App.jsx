@@ -133,7 +133,7 @@ function App() {
               value={formData.Name}
               onChange={handleChange}
               required
-              autofocus
+              autoFocus
             />
             <select
               id="Strand"
