@@ -11,7 +11,7 @@ function App() {
   const [formData, setFormData] = useState({
     Date: "",
     Name: "",
-    Strand: "",
+    Strand: "STEM",
     ReportCard: "",
     GoodMoral: "",
     PSA: "",
