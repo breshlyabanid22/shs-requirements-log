@@ -181,31 +181,7 @@ function App() {
                 />
               </label>
               <hr />
-              <p>2. Good Moral</p>
-              <label>
-                Original
-                <input
-                  id="GoodMoral"
-                  type="radio"
-                  name="GoodMoral"
-                  value="Original"
-                  checked={formData.GoodMoral === "Original"}
-                  onChange={handleChange}
-                />
-              </label>
-              <label>
-                Photocopy
-                <input
-                  id="GoodMoral"
-                  type="radio"
-                  name="GoodMoral"
-                  value="Photocopy"
-                  checked={formData.GoodMoral === "Photocopy"}
-                  onChange={handleChange}
-                />
-              </label>
-              <hr />
-              <p>3. PSA</p>
+              <p>2. Birth Certificate/PSA</p>
               <label>
                 Original
                 <input
@@ -225,6 +201,30 @@ function App() {
                   name="PSA"
                   value="Photocopy"
                   checked={formData.PSA === "Photocopy"}
+                  onChange={handleChange}
+                />
+              </label>
+              <hr />
+              <p>3. Good Moral</p>
+              <label>
+                Original
+                <input
+                  id="GoodMoral"
+                  type="radio"
+                  name="GoodMoral"
+                  value="Original"
+                  checked={formData.GoodMoral === "Original"}
+                  onChange={handleChange}
+                />
+              </label>
+              <label>
+                Photocopy
+                <input
+                  id="GoodMoral"
+                  type="radio"
+                  name="GoodMoral"
+                  value="Photocopy"
+                  checked={formData.GoodMoral === "Photocopy"}
                   onChange={handleChange}
                 />
               </label>
