@@ -67,7 +67,7 @@ function App() {
     formDataToSend.append("Remarks", formData.Remarks);
 
     axios.post(
-        "https://api.sheety.co/b33a478c243efeec56a9c9227fbc8540/shsEnrolledStudents'File2425/sheet1",
+        "https://api.apispreadsheets.com/data/AgEVYvmPVi593LHk/",
         formDataToSend,
         {
           headers: {
