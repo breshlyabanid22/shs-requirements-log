@@ -67,12 +67,11 @@ function App() {
     formDataToSend.append("Remarks", formData.Remarks);
 
     axios.post(
-        "https://sheet.best/api/sheets/250765e3-7152-4c83-b8fb-db8e2d3da20f",
+        "https://api.sheety.co/b33a478c243efeec56a9c9227fbc8540/shsEnrolledStudents'File2425/sheet1",
         formDataToSend,
         {
           headers: {
             "Content-Type": "application/json",
-            "X-Api-Key": "-_#$B03m1erWJamkU2QL2eA0n#azC1d4XWpak!iZonqWPNYh!n3Ewejx3C!bf8AD",
           },
         }
       )
