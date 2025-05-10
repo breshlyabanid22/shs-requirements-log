@@ -1,7 +1,7 @@
 import './App.css'
 const Navbar = () => {
   return (
-    <div className='nav-bar'>SHS Enrolled Students' Requirements 2024-2025</div>
+    <div className='nav-bar'>SHS Enrolled Students' Requirements 2025-2026</div>
   )
 }
 
