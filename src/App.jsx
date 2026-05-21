@@ -67,7 +67,7 @@ function App() {
     formDataToSend.append("Remarks", formData.Remarks);
 
     axios.post(
-        "https://sheetdb.io/api/v1/9kqn2vhwtf19r",
+        "https://sheetdb.io/api/v1/9kqn2vhwtf19r/",
         formDataToSend,
         {
           headers: {
