@@ -148,6 +148,7 @@ function App() {
               <option value="ARTS & SOCSCI">ARTS & SOCSCI</option>
               <option value="BUS & ENTREP">BUS & ENTREP</option>
               <option value="HUM - CRIM">HUM - CRIM</option>
+              <option value="OLD STUDENT">OLD STUDENT</option>
             </select>
             <input
               type="date"
