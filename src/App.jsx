@@ -11,7 +11,7 @@ function App() {
   const [formData, setFormData] = useState({
     Date: "",
     Name: "",
-    Strand: "STEM",
+    Strand: "ARCHI - STEM",
     ReportCard: "",
     GoodMoral: "",
     PSA: "",
@@ -81,7 +81,7 @@ function App() {
         setFormData({
           Name: "",
           Date: formattedDate,
-          Strand: "STEM",
+          Strand: "ARCHI - STEM",
           ReportCard: "",
           GoodMoral: "",
           PSA: "",
@@ -141,9 +141,13 @@ function App() {
               onChange={handleChange}
               required
             >
-              <option value="STEM">STEM</option>
-              <option value="ABM">ABM</option>
-              <option value="GAS">GAS</option>
+              <option value="ARCHI - STEM">ARCHI - STEM</option>
+              <option value="COMP - STEM">COMP - STEM</option>
+              <option value="ENGR - STEM">ENGR - STEM</option>
+              <option value="HEALTH - STEM">HEALTH - STEM</option>
+              <option value="ARTS & SOCSCI">ARTS & SOCSCI</option>
+              <option value="BUS & ENTREP">BUS & ENTREP</option>
+              <option value="HUM - CRIM">HUM - CRIM</option>
             </select>
             <input
               type="date"
