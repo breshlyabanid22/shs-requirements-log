@@ -285,7 +285,7 @@ function App() {
               <hr />
               <p>6.Admission</p>
               <label>
-                Complete
+                Old Student
                 <input
                   id="Admission"
                   type="radio"
@@ -296,7 +296,7 @@ function App() {
                 />
               </label>
               <label>
-                Missing
+                New Student
                 <input
                   id="Admission"
                   type="radio"
