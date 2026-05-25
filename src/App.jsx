@@ -17,6 +17,7 @@ function App() {
     PSA: "",
     ESC: "",
     TestResult: "",
+    Admission: "New Student",
     Remarks: "",
   });
 
@@ -64,6 +65,7 @@ function App() {
     formDataToSend.append("PSA", formData.PSA);
     formDataToSend.append("ESC", formData.ESC);
     formDataToSend.append("TestResult", formData.TestResult);
+    formDataToSend.append("Admission", formData.Admission);
     formDataToSend.append("Remarks", formData.Remarks);
 
     axios.post(
@@ -87,6 +89,7 @@ function App() {
           PSA: "",
           ESC: "",
           TestResult: "",
+          Admission: "",
           Remarks: "",
         });
         setIsError(false);
@@ -148,7 +151,6 @@ function App() {
               <option value="ARTS & SOCSCI">ARTS & SOCSCI</option>
               <option value="BUS & ENTREP">BUS & ENTREP</option>
               <option value="HUM - CRIM">HUM - CRIM</option>
-              <option value="OLD STUDENT">OLD STUDENT</option>
             </select>
             <input
               type="date"
@@ -277,6 +279,30 @@ function App() {
                   name="TestResult"
                   value="Missing"
                   checked={formData.TestResult === "Missing"}
+                  onChange={handleChange}
+                />
+              </label>
+              <hr />
+              <p>6.Admission</p>
+              <label>
+                Complete
+                <input
+                  id="Admission"
+                  type="radio"
+                  name="Admission"
+                  value="Old Student"
+                  checked={formData.Admission === "Old Student"}
+                  onChange={handleChange}
+                />
+              </label>
+              <label>
+                Missing
+                <input
+                  id="Admission"
+                  type="radio"
+                  name="Admission"
+                  value="New Student"
+                  checked={formData.Admission === "New Student"}
                   onChange={handleChange}
                 />
               </label>
